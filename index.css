@@ -40,6 +40,7 @@ p {
 .nav__item {
     width: 100%;
     list-style: none;
+    height: 38px;
 }
 
 .nav__item a {
@@ -63,15 +64,37 @@ p {
     margin-right: 10px;
 }
 
-.submenu {
+.submenu, .toRight, .toLeft {
     display: none;
 }
 
+/*.toRight {*/
+/*    display: none;*/
+/*}*/
+
 .nav__item:hover > .submenu {
     display: block;
-    /*position: absolute;*/
-    background-color: #fff;
+    position: relative;
     list-style: none;
+    background-color: #fff;
+}
+
+.nav__item:hover > .toRight {
+    display: block;
+    top: -38px;
+    left: 100%;
+    position: relative;
+    list-style: none;
+    background-color: #ffc0c0;
+}
+
+.nav__item:hover > .toLeft {
+    display: block;
+    top: -38px;
+    right: 100%;
+    position: relative;
+    list-style: none;
+    background-color: #dbff8c;
 }
 
 @media screen and (max-width: 718px) {
